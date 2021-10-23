@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/ninkambazi/moirepo#readme"
 }
-MONGO_URL = mongodb+srv://MNinkambazi:NeERjQIFSrFwrKxv@cluster0.fanws.mongodb.net/myfbdb?retryWrites=true&w=majority
+
  "scripts": {
       "start": "node index.js", 
       "client": "cd client && npm start",

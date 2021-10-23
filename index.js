@@ -21,7 +21,7 @@ mongoose.connect(
   }
 );
 
-app.use("/images", express.static(path.join(__dirname, "build/images")));
+//app.use("/images", express.static(path.join(__dirname, "build/images")));
 /*
 // Serve static files from the React frontend app
 //app.use(express.static(path.join(__dirname, '../frontend/build')))
@@ -40,46 +40,19 @@ if (process.env.NOD_ENV === 'production'){
     //res.sendFile(path.resolve('/client/build/index.html'))
     //res.sendFile(path.resolve('client/build/index.html'))
   });
-}*/
-if (process.env.NODE_ENV === 'production') {
-  /*
-  // Exprees will serve up production assets
-  //app.use(express.static('client/build'));
+}
+*/
 
-   //Express serve up index.html file if it doesn't recognize route
-  
+if (process.env.NODE_ENV === 'production') {
+  // Exprees will serve up production assets
+  app.use(express.static('client/build'));
+
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require('path');
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-  
-  // ... other app.use middleware 
-     app.use(express.static(path.join(__dirname, "client", "build")))
-  
-  // ...
-  // Right before your app.listen(), add this:
- // app.get("*", (req, res) => {
-      //res.sendFile(path.join(__dirname, "client", "build", "index.html"));
- */
-    /*
-        app.use(express.static(path.join(__dirname, 'client', 'build')));
-      
-        app.get('*', (req, res) => {
-          res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-        });
-   */ 
-  
-       
-          // Exprees will serve up production assets
-          app.use(express.static('client/build'));
-        
-          // Express serve up index.html file if it doesn't recognize route
-          const path = require('path');
-          app.get('*', (req, res) => {
-            res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-          });
-        }     
-      
-
+}
 //middleware
 app.use(express.json());
 app.use(helmet());

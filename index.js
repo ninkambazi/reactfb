@@ -42,7 +42,7 @@ if (process.env.NOD_ENV === 'production'){
   });
 }
 */
-/*
+
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
   app.use(express.static('client/build'));
@@ -53,13 +53,14 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
-*/
+/*
 if (process.env.NODE_ENV) {
   app.use(express.static(path.resolve(process.cwd(), 'client/build')))
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(process.cwd(), 'client/build/index.html'))
   })
 }
+*/
 //middleware
 app.use(express.json());
 app.use(helmet());

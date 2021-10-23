@@ -20,8 +20,9 @@ mongoose.connect(
     console.log("Connected to MongoDB");
   }
 );
-/*
+
 app.use("/images", express.static(path.join(__dirname, "build/images")));
+/*
 // Serve static files from the React frontend app
 //app.use(express.static(path.join(__dirname, '../frontend/build')))
 

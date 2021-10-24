@@ -11,6 +11,8 @@ const postRoute = require("./routes/posts");
 const router = express.Router();
 const path = require("path");
 
+//const PORT = process.env.PORT||5000
+const PORT = process.env.PORT||8800
 dotenv.config();
 
 mongoose.connect(
@@ -21,7 +23,7 @@ mongoose.connect(
   }
 );
 
-//app.use("/images", express.static(path.join(__dirname, "build/images")));
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 /*
 // Serve static files from the React frontend app
 //app.use(express.static(path.join(__dirname, '../frontend/build')))
@@ -67,7 +69,6 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-const PORT = process.env.PORT||8080;
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -91,6 +92,4 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(PORT, () => {
-  console.log("Backend server is running!");
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

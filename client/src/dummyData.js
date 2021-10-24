@@ -2,52 +2,52 @@ export const Users = [
   {
     id:1,
     profilePicture: "person/1.jpeg",
-    username: "Safak Kocaoglu",
+    username: "Edwin SAG",
   },
   {
     id:2,
     profilePicture: "person/2.jpeg",
-    username: "Janell Shrum",
+    username: "Smart Codes",
   },
   {
     id:3,
     profilePicture: "person/3.jpeg",
-    username: "Alex Durden",
+    username: "Ninkambazi EN",
   },
   {
     id:4,
     profilePicture: "person/4.jpeg",
-    username: "Dora Hawks",
+    username: "Dora Musa",
   },
   {
     id:5,
     profilePicture: "person/5.jpeg",
-    username: "Thomas Holden",
+    username: "Thomas Mahanjumati",
   },
   {
     id:6,
     profilePicture: "person/6.jpeg",
-    username: "Shirley Beauchamp",
+    username: "Shaa Buu",
   },
   {
     id:7,
     profilePicture: "person/7.jpeg",
-    username: "Travis Bennett",
+    username: "Travis Juma",
   },
   {
     id:8,
     profilePicture: "person/8.jpeg",
-    username: "Kristen Thomas",
+    username: "Penda James",
   },
   {
     id:9,
     profilePicture: "person/9.jpeg",
-    username: "Gary Duty",
+    username: "Mutu Mesa",
   },
   {
     id:10,
     profilePicture: "person/10.jpeg",
-    username: "Safak Kocaoglu",
+    username: "Alan Mwaipopo",
   },
 ];
 
@@ -71,7 +71,7 @@ export const Posts = [
   },
   {
     id: 3,
-    desc: "Every moment is a fresh beginning.",
+    desc: "Mambo ni Vipi?????.",
     photo: "post/3.jpeg",
     date: "1 hour ago",
     userId: 3,
@@ -104,7 +104,7 @@ export const Posts = [
   },
   {
     id: 7,
-    desc: "Never regret anything that made you smile.",
+    desc: "Habari Gani Jamani.",
     photo: "post/7.jpeg",
     date: "2 days ago",
     userId: 7,

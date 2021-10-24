@@ -33,3 +33,4 @@
       "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run client\"",
       "heroku-postbuild": " cd client && npm install && npm run build"
     },
+    "proxy": "http://localhost:8800/api"

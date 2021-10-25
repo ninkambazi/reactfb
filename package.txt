@@ -34,3 +34,5 @@
       "heroku-postbuild": " cd client && npm install && npm run build"
     },
 "proxy": "http://localhost:8800/api"
+
+env y react REACT_APP_PUBLIC_FOLDER = http://localhost:8800/images/ public is root server
